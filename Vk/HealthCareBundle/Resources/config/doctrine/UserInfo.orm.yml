@@ -1,0 +1,30 @@
+App\Vk\HealthCareBundle\Entity\UserInfo:
+    type: entity
+    table: user_info 
+    repositoryClass: App\Vk\HealthCareBundle\Repository\UserInfoRepository   
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        fullname:
+            type: string
+            length: 100
+        age:
+            type: integer
+        bog:
+            type:  string
+            length:  20
+        phone:
+            type: string
+            length: 15
+        address:
+            type: text
+        profile:
+            type: string
+            length: 255
+            nullable: true
+    oneToMany:
+        userPost:
+            targetEntity: App\Vk\HealthCareBundle\Entity\UserPost
+            mappedBy: userInfo

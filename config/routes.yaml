@@ -1,0 +1,6 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+app_file:
+  resource: "@VkHealthCareBundle/Resources/config/routing.yml"
+  prefix: /

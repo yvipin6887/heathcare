@@ -1,0 +1,49 @@
+home_page:
+   path: /home
+   controller:    Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+   defaults:
+        template: '@VkHealthCare/home.php.twig'
+
+
+index_path:
+   path: /form
+   # controller: App\Vk\HealthCareBundle\Controller\FormController::index
+   defaults: { _controller: vk.healthcare.controller::index}
+
+post_action:
+   path: /add-from
+   defaults: { _controller: vk.healthcare.controller::postAction}
+   methods: POST
+
+get_form_action:
+   path: /get-from
+   defaults: { _controller: vk.healthcare.controller::getFormData}
+   methods: GET
+
+get_form_edit:
+   path: /edit-form/{id}
+   defaults: {_controller: vk.healthcare.controller::editFormData}
+   methods: GET
+
+delete_form__id:
+   path: /delete-form/{id}
+   defaults: {_controller: vk.healthcare.controller::deleteForm}
+   methods: GET
+
+create_post_form__id:
+   path: /creade-post/{id}
+   defaults: {_controller: vk.healthcare.controller::createPostAction}
+   methods: GET
+   
+
+userpost_action:
+   path: /add-user-post
+   defaults: { _controller: vk.healthcare.controller::createPostAction}
+   methods: POST
+
+get_user_post:
+   path: /get-my-post
+   defaults: { _controller: vk.healthcare.controller::getMyPostAction}
+
+
+

@@ -1,0 +1,15 @@
+<html>
+   <head>
+     
+   </head>
+   
+   <body>
+      <h1> RequireJS Sample Page </h1>
+      <script data-main = "libs/config" src = "{{asset('libs/require.js')}}"></script>
+      <script>
+         require(['config'],function(){
+            require(['customjs/test']);
+         });
+      </script>
+   </body>
+</html>

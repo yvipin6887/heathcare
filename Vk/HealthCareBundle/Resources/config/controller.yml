@@ -1,0 +1,9 @@
+services:
+  
+  vk.healthcare.controller:
+        public: true
+        class: 'App\Vk\HealthCareBundle\Controller\FormController'
+        arguments:
+          - '@vk.healthcare.services'
+        calls:
+          - [setContainer,['@service_container']]

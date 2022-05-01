@@ -1,0 +1,29 @@
+App\Vk\HealthCareBundle\Entity\UserPost:
+    type: entity
+    table: user_post
+    repositoryClass: App\Vk\HealthCareBundle\Repository\UserPostRepository   
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        title:
+            type: string
+            length: 100
+            nullable: true
+        description:
+            type: text
+            nullable: true
+        image:
+            type: string
+            length: 100
+            nullable: true
+        datetime:
+            type: datetime
+            nullable: true
+    manyToOne:
+        userInfo:
+            targetEntity: App\Vk\HealthCareBundle\Entity\UserInfo
+            inversedBy: userPost
+            joinColumn:
+                nullable: false

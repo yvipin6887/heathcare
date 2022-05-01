@@ -1,0 +1,14 @@
+parameters: 
+  vk.healthcare.services.class: App\Vk\HealthCareBundle\Services\HealthCareService
+
+services:
+
+  vk.healthcare.services:
+    class: '%vk.healthcare.services.class%'
+    arguments:
+      - '@Doctrine\Persistence\ManagerRegistry' 
+      - '@Symfony\Component\String\Slugger\SluggerInterface' 
+
+  App\Vk\HealthCareBundle\EventListener\LoginListener:
+        tags:
+            - { name: kernel.event_listener, event: security.interactive_login }
