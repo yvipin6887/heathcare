@@ -1,3 +1,9 @@
 {
-    "name": "vk/healthcare"
+    "name": "vk/healthcare",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/yvipin6887/heathcare.git"
+        }
+    ]
 }
