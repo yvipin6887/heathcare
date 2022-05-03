@@ -1,5 +1,6 @@
 {
     "name": "vk/healthcare",
+    "version": "1.0.0",
     "repositories": [
         {
             "type": "vcs",
