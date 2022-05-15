@@ -1,6 +1,10 @@
 {
     "name": "vipinyadav/healthcare",
     "version": "1.0.0",
+    "description": "Vipin Yadav HealthCare",
+    "require": {
+        "php": ">=7.4"
+     },
     "repositories": [
         {
             "type": "vcs",
